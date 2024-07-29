@@ -48,12 +48,10 @@ public class LightingTower : MonoBehaviour
 	private void ActiveLighting()
 	{
 
-		lightingVFX.SetActive(
-			Vector3.Distance(target.transform.position, transform.position) 
-			<= lightingDistance
-            );
+		bool isLighting = Vector3.Distance(target.transform.position, transform.position) <= lightingDistance;
+		lightingVFX.SetActive(isLighting);
 
-		MoveLightingPos();
+		if(isLighting)  MoveLightingPos();
 
     }
 
