@@ -1,4 +1,4 @@
-/// Thanks to Ronja Böhringer made some of this code
+/// Thanks to Ronja BĂ¶hringer made some of this code
 
 Shader "Custom/VFDistanceFade"
 {
@@ -67,7 +67,7 @@ Shader "Custom/VFDistanceFade"
 
                 //clip(DistanceFadeClip(i.screenPos, _DitherPattern, _DitherPattern_TexelSize, _MinDistance, _MaxDistance));
 
-                return fixed4( color.rgb, distanceFade > 0 ? color.a : .5f);
+                return fixed4( color.rgb, distanceFade > 0 ? color.a : .1f);
 
             }
             ENDCG
